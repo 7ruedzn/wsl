@@ -3,15 +3,16 @@
 ## Starship
 Download starship in windows using by running the command on powershell:
 
-
+```sh
 winget install --id Starship.Starship
-
+```
 
 Then add this line into your powershell profile. You can find it by running {editor} $PROFILE
 
-notepad $PROFILE
-Invoke-Expression (&starship init powershell) //Add into $PROFILE
-
+```sh
+notepad $PROFILE #open profile with editor
+Invoke-Expression (&starship init powershell) #add this line into $PROFILE
+```
 
 ## Nerd font
 1. Install the Jetbrains Nerd font on this link [JetbrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip) and install.
@@ -21,7 +22,7 @@ Download windows terminal from the microsoft store. Open it and paste this setti
 
 This JSON will set the configurations and themes to your windows terminal.
 
-
+```json
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
@@ -201,20 +202,21 @@ This JSON will set the configurations and themes to your windows terminal.
     "themes": [],
     "useAcrylicInTabRow": true
 }
-
+```
 
 ## Arch WSL
 Arch wsl is yet not available in the official WSL distros by microsoft. To check the available distros, run the following on powershell:
 
-
+```sh
 wsl --list --online
-
+```
 
 next you will need to install the wsl on your system by the following command. It will install the default distro, that is currently Ubuntu, but we will install the arch next. Later you can remove the Ubuntu profile on your windows terminal.
 
 
+```sh
 wsl --install
-
+```
 
 When it finishes installing, please reboot your machine. If you don't reboot, the arch WSL won't be able to be installed.
 
