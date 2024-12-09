@@ -7,11 +7,25 @@ Download starship in windows using by running the command on powershell:
 winget install --id Starship.Starship
 ```
 
-Then add this line into your powershell profile. You can find it by running {editor} $PROFILE
+Install Terminal Icons on powershell
 
 ```sh
-notepad $PROFILE #open profile with editor
-Invoke-Expression (&starship init powershell) #add this line into $PROFILE
+Install-Module -Name Terminal-Icons -Repository PSGallery
+```
+
+Open your profile to set the configurations
+
+```sh
+notepad $PROFILE #open profile with editor (code, notepad, etc)
+```
+
+Add these into your $PROFILE
+
+```sh
+Import-Module -Name Terminal-Icons
+Remove-Item Alias:ls -ErrorAction SilentlyContinue
+Function ls { Get-ChildItem | Format-Wide }
+Invoke-Expression (&starship init powershell)
 ```
 
 ## Nerd font
@@ -213,7 +227,6 @@ wsl --list --online
 
 next you will need to install the wsl on your system by the following command. It will install the default distro, that is currently Ubuntu, but we will install the arch next. Later you can remove the Ubuntu profile on your windows terminal.
 
-
 ```sh
 wsl --install
 ```
@@ -221,3 +234,18 @@ wsl --install
 When it finishes installing, please reboot your machine. If you don't reboot, the arch WSL won't be able to be installed.
 
 After rebooting, this repo has implemented the arch distro on WSL [ArchWSL](https://github.com/yuk7/ArchWSL). To install it correctly, please follow the docs on the readme provided by the author: [Arch WSL install guide](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/)
+
+After installing arch on WSL, you can rice it by using my dotfiles with GNU stow: [dotfiles](https://github.com/7ruedzn/dotfiles)
+
+## QOL settings on WSL
+
+windows appends paths while typing for commands, so it can cause a lot of input lag, and also resets the hosts and resolv.conf on every instance of WSL. Add the following to the ```/etc/wsl.conf``` on WSL to fix those issues:
+   
+```sh
+[interop]
+appendWindowsPath = false
+
+[network]
+generateResolvConf = false
+generateHosts = false
+```
