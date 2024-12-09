@@ -1,5 +1,23 @@
 # Setup
 
+## Powershell
+
+Download the LTS of powershell with winget:
+
+## Neovim
+
+I use main main neovim setup on WSL + arch, but i also have it installed on windows for quick file editing, if needed
+
+```sh
+winget install Neovim.Neovim
+```
+
+After getting neovim, i like to use the neovim distro nvchad:
+
+```sh
+git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim && nvim
+```
+
 ## Starship
 Download starship in windows using by running the command on powershell:
 
@@ -29,10 +47,10 @@ Invoke-Expression (&starship init powershell)
 ```
 
 ## Nerd font
-1. Install the Jetbrains Nerd font on this link [JetbrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip) and install.
+Download the JetbrainsMono Nerd font on this link [JetbrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip) and install it.
 
 ## Windows terminal
-Download windows terminal from the microsoft store. Open it and paste this settings into your windows terminal settings. You can find the settings JSON by right clicking on the down arrow on the top bar -> settings -> open JSON file (at the left bottom of your left side tab).
+Download windows terminal from the microsoft store. Open it and paste the JSON into your windows terminal settings. You can find the settings JSON by right clicking on the down arrow on the top bar -> settings -> open JSON file.
 
 This JSON will set the configurations and themes to your windows terminal.
 
