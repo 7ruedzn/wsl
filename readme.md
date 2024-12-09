@@ -4,6 +4,10 @@
 
 Download the LTS of powershell with winget:
 
+```sh
+winget install --id Microsoft.PowerShell --source winget
+```
+
 ## Neovim
 
 I use main main neovim setup on WSL + arch, but i also have it installed on windows for quick file editing, if needed
