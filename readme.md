@@ -298,6 +298,12 @@ After that, please follow the guides at: [arch linux WSL](https://wiki.archlinux
 
 After installing arch on WSL, you can rice it by using my dotfiles with GNU stow: [dotfiles](https://github.com/7ruedzn/dotfiles)
 
+You can install these packages (all the packages above are not required, since WSL can't run all like hyprland):
+
+```sh
+yay -S zsh tmux starship cliphist wl-clip-persist btop ripgrep zip thunar tumbler rofi unzip less nvm exa fzf jq gvfs pdfjs wlrobs-hg wireplumber ttf-jetbrains-mono-nerd 3.3.0-1 --noconfirm
+```
+
 ## QOL settings on WSL
 
 windows appends paths while typing for commands, so it can cause a lot of input lag, and also resets the hosts and resolv.conf on every instance of WSL. Add the following to the ```/etc/wsl.conf``` on WSL to fix those issues:
