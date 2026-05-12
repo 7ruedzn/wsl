@@ -250,12 +250,49 @@ wsl --list --online
 next you will need to install the wsl on your system by the following command. It will install the default distro, that is currently Ubuntu, but we will install the arch next. Later you can remove the Ubuntu profile on your windows terminal.
 
 ```sh
-wsl --install
+wsl --install archlinux
 ```
 
 When it finishes installing, please reboot your machine. If you don't reboot, the arch WSL won't be able to be installed.
 
-After rebooting, this repo has implemented the arch distro on WSL [ArchWSL](https://github.com/yuk7/ArchWSL). To install it correctly, please follow the docs on the readme provided by the author: [Arch WSL install guide](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/)
+After rebooting, create a new user and set it in the *wheel* group:
+```sh
+useradd -m -G wheel -s /bin/bash {username}
+```
+
+Set the user password:
+```sh
+passwd {username}
+```
+
+Exit WSL:
+```sh
+exit
+```
+
+Set the created user as the default:
+```sh
+wsl --manage archlinux --set-default-user username
+```
+
+Enter as root in the **powershell**:
+```sh
+wsl -u root
+```
+
+Install sudo and nvim:
+```sh
+pacman -Syu sudo neovim
+```
+
+Open the file with neovim:
+```sh
+EDITOR=nvim visudo
+```
+
+Remove the hashtag (#) on this line and save it with **w!** then **qa!** to save and exit:
+
+%wheel ALL=(ALL:ALL) ALL
 
 After installing arch on WSL, you can rice it by using my dotfiles with GNU stow: [dotfiles](https://github.com/7ruedzn/dotfiles)
 
