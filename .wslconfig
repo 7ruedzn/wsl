@@ -1,0 +1,6 @@
+[wsl2]
+
+networkingMode=mirrored
+
+# Turn on default connection to bind WSL 2 localhost to Windows localhost. Setting is ignored when networkingMode=mirrored
+localhostforwarding=true
