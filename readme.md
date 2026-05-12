@@ -294,6 +294,8 @@ Remove the hashtag (#) on this line and save it with **w!** then **qa!** to save
 
 %wheel ALL=(ALL:ALL) ALL
 
+After that, please follow the guides at: [arch linux WSL](https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL)
+
 After installing arch on WSL, you can rice it by using my dotfiles with GNU stow: [dotfiles](https://github.com/7ruedzn/dotfiles)
 
 ## QOL settings on WSL
