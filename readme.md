@@ -301,7 +301,7 @@ After installing arch on WSL, you can rice it by using my dotfiles with GNU stow
 You can install these packages (all the packages above are not required, since WSL can't run all like hyprland):
 
 ```sh
-yay -S zsh tmux starship cliphist zoxide wl-clip-persist btop ripgrep zip thunar tumbler rofi unzip less nvm exa fzf jq gvfs pdfjs wlrobs-hg wireplumber ttf-jetbrains-mono-nerd 3.3.0-1 --noconfirm
+yay -S zsh tmux starship cliphist zoxide gnome-keyring wl-clip-persist btop ripgrep zip thunar tumbler rofi unzip less nvm exa fzf jq gvfs pdfjs wlrobs-hg wireplumber ttf-jetbrains-mono-nerd 3.3.0-1 --noconfirm
 ```
 
 ## QOL settings on WSL
