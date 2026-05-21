@@ -29,6 +29,10 @@ Download starship in windows using by running the command on powershell:
 winget install --id Starship.Starship
 ```
 
+Download the starship.toml and place it in *%userprofile%/.config/*
+
+## Terminal Icons
+
 Install Terminal Icons on powershell
 
 ```sh
